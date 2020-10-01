@@ -1,0 +1,11 @@
+<nb-card>
+  <nb-card-body>
+    <h2>
+      {{employee?.firstName}} {{employee?.lastName}}
+      <nb-actions size="medium">
+        <nb-action icon="people-outline" [routerLink]="['/pages/employees/dependents/', employee?.id]">Dependents</nb-action>
+        <nb-action icon="gift-outline" [routerLink]="['/pages/employees/paychecks/', employee?.id]">Paychecks</nb-action>
+      </nb-actions>
+    </h2>
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,66 @@
+<nb-alert *ngIf="errors?.length" outline="danger" role="alert" closable (close)="resetErrors()">
+  <p class="alert-title">
+    <b>Oh snap!</b>
+  </p>
+  <ul class="alert-message-list">
+    <li *ngFor="let error of errors" class="alert-message">{{ error }}</li>
+  </ul>
+</nb-alert>
+
+<nb-alert *ngIf="messages?.length" outline="success" role="alert" closable (close)="onClose()">
+  <p class="alert-title">
+    <b>Hooray!</b>
+  </p>
+  <ul class="alert-message-list">
+    <li *ngFor="let message of messages" class="alert-message">{{ message }}</li>
+  </ul>
+</nb-alert>
+
+<div class="row">
+  <div class="col-md-12">
+    <ngx-employee-card [employee]="employee"></ngx-employee-card>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <nb-card>
+      <nb-card-header>Enter new Year</nb-card-header>
+      <nb-card-body>
+        <input type="number" nbInput placeholder="Year" name="year" [(ngModel)]="year" value="2020">
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-3">
+    <nb-card>
+      <nb-card-header>Pick Existing Year</nb-card-header>
+      <nb-card-body>
+
+        <nb-select [(selected)]="year" name="presetYear">
+          <nb-option *ngFor="let y of availableYears" [value]="y">
+            {{y}}
+          </nb-option>
+        </nb-select>
+
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-6">
+    <nb-card>
+      <nb-card-header>Re/Generate for {{year}}</nb-card-header>
+      <nb-card-body>
+        <button type="button" nbButton status="primary" (click)="generatePaychecks($event)">Generate and Process Paychecks</button>
+
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+<nb-card>
+  <nb-card-header>
+    Paychecks for {{year}}
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
