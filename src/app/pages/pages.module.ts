@@ -9,6 +9,7 @@ import { NotFoundComponent } from './miscellaneous/not-found/not-found.component
 import { NbCardModule, NbIconModule, NbInputModule, NbTreeGridModule, NbButtonModule } from '@nebular/theme';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from "@angular/forms";
+import { EmployeePinService } from "./services/employee-pinner.service";
 
 @NgModule({
   imports: [
@@ -24,6 +25,9 @@ import { FormsModule } from "@angular/forms";
   ],
   declarations: [
     PagesComponent, NotFoundComponent, DashboardComponent,
+  ],
+  providers: [
+    EmployeePinService,
   ],
 })
 export class PagesModule {

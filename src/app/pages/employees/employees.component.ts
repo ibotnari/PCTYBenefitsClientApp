@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { LocalDataSource } from "ng2-smart-table";
-import { Client } from "../../../api/api";
-import { Employee } from "../../../api/api";
+import { Client, Employee } from "../../../api/api";
 import { DatePipe } from "@angular/common";
 import { OnInit } from "@angular/core";
 import { GridcellNavComponent } from './gridcell-nav/gridcell-nav.component';

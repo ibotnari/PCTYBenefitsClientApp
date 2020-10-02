@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-import { NbActionsModule, NbCardModule, NbSelectModule, NbIconModule, NbInputModule, NbTreeGridModule, NbAlertModule, NbButtonModule } from '@nebular/theme';
+import { NbToggleModule, NbActionsModule, NbCardModule, NbSelectModule, NbIconModule, NbInputModule, NbTreeGridModule, NbAlertModule, NbButtonModule } from '@nebular/theme';
 import { EmployeesRoutingModule } from './employees-routing.module';
 import { EmployeesComponent } from './employees.component';
 import { GridcellNavComponent } from './gridcell-nav/gridcell-nav.component';
@@ -25,6 +25,7 @@ import { EmployeeCardComponent } from './employee-card/employee-card.component';
     NbAlertModule,
     NbSelectModule,
     NbActionsModule,
+    NbToggleModule,
     EmployeesRoutingModule,
   ],
 })

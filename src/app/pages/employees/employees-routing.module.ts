@@ -11,6 +11,10 @@ const routes: Routes = [
     component: EmployeesComponent,
   },
   {
+    path: "employee/:id",
+    component: PaychecksComponent,
+  },
+  {
     path: "dependents/:id",
     component: DependentsComponent,
   },

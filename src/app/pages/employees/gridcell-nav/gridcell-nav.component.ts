@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   template: `
 <nb-actions size="medium" fullWidth>
   <nb-action icon="people-outline" [routerLink]="['/pages/employees/dependents/', id]"></nb-action>
-  <nb-action icon="gift-outline" [routerLink]="['/pages/employees/paychecks/', id]"></nb-action>
+  <nb-action icon="credit-card-outline" [routerLink]="['/pages/employees/paychecks/', id]"></nb-action>
 </nb-actions>
 `,
 })
