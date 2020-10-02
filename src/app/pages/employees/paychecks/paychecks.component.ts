@@ -62,15 +62,21 @@ export class PaychecksComponent extends EmployeeBaseComponent implements OnInit,
   }
 
   generatePaychecks(event) {
-
-    this.service.processPaychecks(this.year, this.id).subscribe(_ => {
+    this.service.processPaychecks(this.id, this.year).subscribe(_ => {
         this.loadPaychecks();
       },
       (err) => {
         this.handleError(err);
       });
   }
-
+  deletePaychecks(event) {
+    this.service.deletePaychecks(this.id, this.year).subscribe(_ => {
+      this.loadPaychecks();
+    },
+      (err) => {
+        this.handleError(err);
+      });
+  }
   ngOnDestroy() {
     super.ngOnDestroy();
   }

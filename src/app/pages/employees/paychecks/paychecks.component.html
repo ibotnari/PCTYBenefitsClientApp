@@ -48,8 +48,8 @@
     <nb-card>
       <nb-card-header>Re/Generate for {{year}}</nb-card-header>
       <nb-card-body>
-        <button type="button" nbButton status="primary" (click)="generatePaychecks($event)">Generate and Process Paychecks</button>
-
+        <button type="button" nbButton status="primary" (click)="generatePaychecks($event)">Generate</button>
+        <button type="button" nbButton status="primary" (click)="deletePaychecks($event)">Delete</button>
       </nb-card-body>
     </nb-card>
   </div>
