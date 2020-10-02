@@ -24,15 +24,15 @@
 <div class="row">
   <div class="col-md-3">
     <nb-card>
-      <nb-card-header>Enter new Year</nb-card-header>
+      <nb-card-header>Enter Year</nb-card-header>
       <nb-card-body>
-        <input type="number" nbInput placeholder="Year" name="year" [(ngModel)]="year" value="2020">
+        <input type="number"  [max]="2050" nbInput placeholder="Year" name="year" [(ngModel)]="year" value="2020">
       </nb-card-body>
     </nb-card>
   </div>
   <div class="col-md-3">
     <nb-card>
-      <nb-card-header>Pick Existing Year</nb-card-header>
+      <nb-card-header>Pick Year</nb-card-header>
       <nb-card-body>
 
         <nb-select [(selected)]="year" name="presetYear">
