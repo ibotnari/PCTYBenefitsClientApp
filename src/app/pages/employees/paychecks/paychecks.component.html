@@ -49,8 +49,12 @@
       <nb-card-header>Re/Generate for {{year}}</nb-card-header>
       <nb-card-body>
         <nb-actions size="medium">
-          <button type="button" nbButton status="primary" (click)="generatePaychecks($event)">Generate</button>
-          <button type="button" nbButton status="primary" (click)="deletePaychecks($event)">Delete</button>
+          <nb-action>
+            <button type="button" nbButton status="primary" (click)="generatePaychecks($event)">Generate</button>
+          </nb-action>
+          <nb-action>
+            <button type="button" nbButton status="primary" (click)="deletePaychecks($event)">Delete</button>
+          </nb-action>
         </nb-actions>
       </nb-card-body>
     </nb-card>
