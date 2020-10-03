@@ -26,7 +26,7 @@
     <nb-card>
       <nb-card-header>Enter Year</nb-card-header>
       <nb-card-body>
-        <input type="number"  [max]="2050" nbInput placeholder="Year" name="year" [(ngModel)]="year" value="2020">
+        <input type="number" [max]="2050" nbInput placeholder="Year" name="year" [(ngModel)]="year" value="2020">
       </nb-card-body>
     </nb-card>
   </div>
@@ -48,8 +48,10 @@
     <nb-card>
       <nb-card-header>Re/Generate for {{year}}</nb-card-header>
       <nb-card-body>
-        <button type="button" nbButton status="primary" (click)="generatePaychecks($event)">Generate</button>
-        <button type="button" nbButton status="primary" (click)="deletePaychecks($event)">Delete</button>
+        <nb-actions size="medium">
+          <button type="button" nbButton status="primary" (click)="generatePaychecks($event)">Generate</button>
+          <button type="button" nbButton status="primary" (click)="deletePaychecks($event)">Delete</button>
+        </nb-actions>
       </nb-card-body>
     </nb-card>
   </div>
