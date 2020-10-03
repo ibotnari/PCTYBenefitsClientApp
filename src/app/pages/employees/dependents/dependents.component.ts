@@ -11,8 +11,8 @@ import {
 
 @Component({
   selector: 'ngx-dependents',
-  templateUrl: './Dependents.component.html',
-  styleUrls: ['./Dependents.component.scss'],
+  templateUrl: './dependents.component.html',
+  styleUrls: ['./dependents.component.scss'],
 })
 export class DependentsComponent extends EmployeeBaseComponent implements OnInit, OnDestroy {
 
