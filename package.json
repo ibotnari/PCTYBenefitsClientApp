@@ -28,7 +28,7 @@
     "prepush": "npm run lint:ci",
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
     "postinstall": "ngcc --properties es2015 es5 browser module main --first-only --create-ivy-entry-points --tsconfig \"./src/tsconfig.app.json\"",
-    "deploy": "ng build --prod --base-href /PCTYBenefitsClientApp/"
+    "deploy": "ng build --prod --base-href=\"/PCTYBenefitsClientApp\""
   },
   "dependencies": {
     "@akveo/ng2-completer": "^9.0.1",
