@@ -5,5 +5,5 @@
  */
 export const environment = {
   production: true,
-  apiRoot: 'https://pctybenefitsserverapp.azurewebsites.net/',
+  apiRoot: 'https://pctybenefitsserverapp.azurewebsites.net',
 };
