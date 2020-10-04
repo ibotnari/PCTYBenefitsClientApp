@@ -94,9 +94,6 @@ export class EmployeesComponent extends BaseComponent implements OnInit {
         editable: false,
         addable: false,
         width: "5%",
-        editor: {
-          type: 'custom',
-        },
       },
       firstName: {
         title: "First Name",
@@ -134,9 +131,6 @@ export class EmployeesComponent extends BaseComponent implements OnInit {
         filter: false,
         editable: false,
         addable: false,
-        editor: {
-          type: 'custom',
-        },
       },
     },
   };

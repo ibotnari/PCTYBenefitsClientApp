@@ -97,9 +97,6 @@ export class PaychecksComponent extends EmployeeBaseComponent implements OnInit,
         editable: false,
         addable: false,
         width: "5%",
-        editor: {
-          type: 'custom',
-        },
         valuePrepareFunction: (v: any, row) => {
           return row.year + '/' + row.index;
         },
@@ -120,9 +117,6 @@ export class PaychecksComponent extends EmployeeBaseComponent implements OnInit,
         editable: false,
         addable: false,
         width: "5%",
-        editor: {
-          type: 'custom',
-        },
       },
       benefitsCost: {
         title: "Benefits Cost",
@@ -130,9 +124,6 @@ export class PaychecksComponent extends EmployeeBaseComponent implements OnInit,
         editable: false,
         addable: false,
         width: "5%",
-        editor: {
-          type: 'custom',
-        },
       },
     },
   };

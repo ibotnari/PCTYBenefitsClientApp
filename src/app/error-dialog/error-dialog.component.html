@@ -1,0 +1,22 @@
+<nb-card>
+    <nb-card-header>Error</nb-card-header>
+  <nb-card-body>
+    <p>{{data.message}}</p>
+    <div>
+      <ul class="alert-message-list">
+        <li *ngFor="let error of data.errors" class="alert-message">{{ error }}</li>
+      </ul>
+      <p *ngIf="data.reason">
+        Reason: {{data.reason}}
+      </p>
+      <p>
+        Status: {{data.status}}
+      </p>
+    </div>
+  </nb-card-body>
+  <nb-card-footer>
+    <span class="float-right">
+      <button nbButton (click)="dialogRef.close()">Close</button>
+    </span>
+  </nb-card-footer>
+  </nb-card>

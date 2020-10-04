@@ -110,9 +110,6 @@ export class DependentsComponent extends EmployeeBaseComponent implements OnInit
         editable: false,
         addable: false,
         width: "5%",
-        editor: {
-          type: 'custom',
-        },
       },
       firstName: {
         title: "First Name",
