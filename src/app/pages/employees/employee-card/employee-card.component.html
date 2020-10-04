@@ -1,15 +1,14 @@
 <nb-card>
   <nb-card-header>
+
+    <nb-actions size="medium" class="d-inline-flex align-items-center float-right">
+      <nb-action icon="people-outline" [routerLink]="['/pages/employees/dependents/', employee?.id]">Dependents</nb-action>
+      <nb-action icon="credit-card-outline" [routerLink]="['/pages/employees/paychecks/', employee?.id]">Paychecks</nb-action>
+      <nb-action><nb-toggle [(checked)]="pinned"></nb-toggle></nb-action>
+    </nb-actions>
     <h2>
-      {{employee?.firstName}} {{employee?.lastName}}
-      <span class="float-right">
-        <nb-toggle [(checked)]="pinned"></nb-toggle>
-      </span>
-      <span class="float-right">
-        <nb-actions size="medium">
-          <nb-action icon="people-outline" [routerLink]="['/pages/employees/dependents/', employee?.id]">Dependents</nb-action>
-          <nb-action icon="credit-card-outline" [routerLink]="['/pages/employees/paychecks/', employee?.id]">Paychecks</nb-action>
-        </nb-actions>
+      <span >
+        {{employee?.firstName}} {{employee?.lastName}}
       </span>
     </h2>
   </nb-card-header>

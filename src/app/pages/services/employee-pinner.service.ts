@@ -24,7 +24,7 @@ export class EmployeePinService implements OnInit, OnDestroy {
     if (!this.isPinned(employee)) {
       this.pinnedEmployees.add(employee);
     }
-    this.employeePinAddEvent.emit(employee);
+    if (employee) this.employeePinAddEvent.emit(employee);
   }
   unpinEmployee(employee: Employee) {
     for (const pinnedEmployee of this.pinnedEmployees) {
@@ -34,7 +34,7 @@ export class EmployeePinService implements OnInit, OnDestroy {
       }
     }
     // this.pinnedEmployees.delete(employee);
-    this.employeePinRemoveEvent.emit(employee);
+    if (employee) this.employeePinRemoveEvent.emit(employee);
   }
   getPinnedEmployees() {
     return Array.from(this.pinnedEmployees.keys());
@@ -46,7 +46,6 @@ export class EmployeePinService implements OnInit, OnDestroy {
       }
     }
     return false;
-    //return this.pinnedEmployees.has(employee);
   }
   ngOnDestroy() {
     this.storage.set(this.STORAGE_KEY, this.pinnedEmployees);
